@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily GitHub Post</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .post {
+            background-color: #f7f7f7;
+            padding: 1em;
+            margin-bottom: 1em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .post h2 {
+            margin-top: 0;
+        }
+
+        .read-more {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 0.5em 1em;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .read-more:hover {
+            background-color: #444;
+        }
+
+        .stats {
+            background-color: #f7f7f7;
+            padding: 1em;
+            margin-bottom: 1em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .stats h2 {
+            margin-top: 0;
+        }
+
+        .stat {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Daily GitHub Post</h1>
+        <p>Stay up-to-date with the latest GitHub news and trends!</p>
+    </header>
+    <main>
+        <section class="post">
+            <h2>Post Title</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+            <button class="read-more">Read More</button>
+        </section>
+        <section class="stats">
+            <h2>GitHub Stats</h2>
+            <ul>
+                <li><span class="stat" id="repositories"> Repositories: 100</span></li>
+                <li><span class="stat" id="followers"> Followers: 500</span></li>
+                <li><span class="stat" id="stars"> Stars: 1000</span></li>
+            </ul>
+        </section>
+    </main>
+    <script>
+        // Add event listener to read more button
+        document.querySelector('.read-more').addEventListener('click', function() {
+            // Toggle post content
+            document.querySelector('.post p').classList.toggle('hidden');
+        });
+
+        // Update GitHub stats
+        fetch('https://api.github.com/users/octocat')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('repositories').textContent = `Repositories: ${data.public_repos}`;
+                document.getElementById('followers').textContent = `Followers: ${data.followers}`;
+                document.getElementById('stars').textContent = `Stars: ${data.public_gists}`;
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>

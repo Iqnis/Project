@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADVENT</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+        }
+
+        /* Navigation bar styles */
+        .navbar {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-logo h1 {
+            margin: 0;
+        }
+
+        .navbar-menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar-menu li {
+            margin-left: 20px;
+        }
+
+        .navbar-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        /* Card styles */
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            color: #333;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card li {
+            padding: 5px 0;
+        }
+
+        /* Promotional Content */
+        .promo-content {
+            padding: 20px;
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        .logos {
+            margin-top: 20px;
+        }
+
+        /* Logo images */
+        .logo-images {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo-images img {
+            width: 100px;
+            margin: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .logo-images img:hover {
+            transform: scale(1.1); /* Expand logo on hover */
+        }
+
+        /* Responsive Design */
+        /* Mobile view */
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar-menu {
+                flex-direction: column;
+            }
+
+            .navbar-menu li {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            .logo-images img {
+                width: 80px;
+            }
+
+            .promo-content {
+                padding: 15px;
+                width: 100%;
+            }
+
+            .card {
+                padding: 15px;
+            }
+        }
+
+        /* Tablet view */
+        @media screen and (max-width: 1024px) {
+            .promo-content {
+                width: 90%;
+            }
+
+            .card {
+                padding: 18px;
+            }
+
+            .navbar-menu a {
+                font-size: 18px;
+            }
+        }
+
+        /* Desktop view */
+        @media screen and (min-width: 1025px) {
+            .promo-content {
+                width: 80%;
+            }
+
+            .card {
+                padding: 25px;
+            }
+
+            .navbar-menu a {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Panel -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <h1>Advent Software</h1>
+        </div>
+        <ul class="navbar-menu">
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#menu">Menu</a></li>
+        </ul>
+    </nav>
+
+    <!-- Promotional Content -->
+    <section class="promo-content">
+        <h2>Our Software Development Services & Advantages</h2>
+
+        <p>At Advent Software, we specialize in delivering high-quality software development solutions that meet the unique needs of our clients. With a focus on innovation, scalability, and user experience, we provide tailored solutions for businesses of all sizes.</p>
+
+        <div class="card services">
+            <h3>Our Services</h3>
+            <ul>
+                <li><strong>Custom Software Development:</strong> We build custom software solutions tailored to your business needs, ensuring optimal performance and scalability.</li>
+                <li><strong>Mobile App Development:</strong> Our expert team develops intuitive and responsive mobile apps for iOS and Android platforms to engage your users effectively.</li>
+                <li><strong>Web Application Development:</strong> We design and develop web applications with a focus on security, speed, and user experience, ensuring seamless performance across all devices.</li>
+                <li><strong>Cloud Solutions:</strong> We help you leverage cloud computing for better collaboration, scalability, and cost-efficiency, providing robust cloud-based services.</li>
+                <li><strong>UI/UX Design:</strong> Our design team focuses on creating visually appealing and user-friendly interfaces to enhance user experience and engagement.</li>
+            </ul>
+        </div>
+
+        <div class="card advantages">
+            <h3>Why Choose Us?</h3>
+            <ul>
+                <li><strong>Expertise in Modern Technologies:</strong> We utilize the latest technologies and frameworks, such as React, Angular, Node.js, and Python, to deliver high-performance solutions.</li>
+                <li><strong>Tailored Solutions:</strong> We understand that every business is unique, and we provide customized solutions designed to meet your specific requirements.</li>
+                <li><strong>Agile Development Process:</strong> Our agile approach ensures that your project is delivered on time, within budget, and with the flexibility to adapt to changing needs.</li>
+                <li><strong>End-to-End Support:</strong> From planning to deployment and ongoing maintenance, we provide comprehensive support to ensure the success of your project.</li>
+                <li><strong>Client-Centered Approach:</strong> We prioritize clear communication, transparency, and a collaborative approach to ensure your satisfaction throughout the development process.</li>
+            </ul>
+        </div>
+
+        <div class="card logos">
+            <h3>Companies Using Our Services</h3>
+            <p>We are proud to partner with a range of leading companies that trust us with their software development needs. Here are just a few:</p>
+            <div class="logo-images">
+                <img src="https://cdn1.npcdn.net/images/1706671683300X300.jpg?md5id=06d25652fd4d2f202bff043f7ae5c504&addBg=1&w=1725203459" alt="Advelsoft">
+                <img src="https://megaarms.com.my/wp-content/uploads/2024/05/mega_arm_logo_00-1536x224.png" alt="Mega Arms">
+                <img src="https://deftech.com.my/wp-content/uploads/2022/05/LOGO-DEFTECH-2022-01-1536x333.png" alt="Deftech">
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
+
+
